@@ -1,62 +1,126 @@
 <?php
-
-use Kernel\Io\Convert\Image;
+namespace Controller;
 use Kernel\Security\Vulnerability\Xss;
 use Kernel\Security\Vulnerability\Csrf;
-use Kernel\Html\Attribute;
-use Kernel\Html\Builder;
-use Kernel\Html\Output;
-use Kernel\Convert\Encoded;
-use Kernel\Convert\Number;
-use Kernel\Url\Location;
+use Kernel\Security\Validation;
+use Kernel\Io\Render;
+use Kernel\Url\Router;
+
+
+/**
+ * Controleur du composant Lunch.
+ *
+ * @author chris
+ * @version 1.0
+ * @package Controller
+ * @category Component controller
+ */
+class Lunch extends Render {
+
+    /**
+     * Point d'entrée du controleur.
+     * @access public
+     * @return void
+     */
+    function __construct() {
+        $projets = [
+            [
+                'logo' => 'icons8-typescript',
+                'title' => 'TypeScript',
+                'author' => 'Anthonydt16',
+                'technos' => ['html', 'scss', 'javascript','php'],
+                'description' => 'Voici un site web qui présente TypeScript!',
+                'description_long' => 'TypeScript est un langage de programmation libre et open-source développé par Microsoft. Il est un sur-ensemble de JavaScript, c\'est-à-dire qu\'il est entièrement compatible avec ce dernier, et qu\'il ajoute des fonctionnalités supplémentaires. TypeScript est principalement utilisé pour le développement d\'applications web front-end, mais peut également être utilisé pour le développement d\'applications côté serveur (Node.js) et pour le développement d\'applications mobiles (Ionic, NativeScript, React Native, etc.).',
+                'price' => 'Gratuit',
+                'link' => 'https://devopti.fr/IUT/',
+                'github' => 'https://github.com/Anthonydt16/TypeScript_Presentation',
+                'captures' => [
+                    '/assets/img/ts.JPG',
+                    '/assets/img/ts2.JPG',
+                ]
+            ],
+            [
+                'logo' => 'Yams',
+                'title' => 'Yams',
+                'author' => 'Anthonydt16',
+                'technos' => ['html', 'css', 'javascript','JQuery'],
+                'description' => 'Un petit jeux réalisé pour un projets web sur jquery !',
+                'description_long' => 'Yams est un jeux de dés avec des régle très précise et il nous à étais demander de le reproduire. ',
+                'price' => 'Gratuit',
+                'link' => 'https://github.com/Anthonydt16/Yams',
+                'github' => 'https://github.com/Anthonydt16/Yams',
+                'captures' => [
+                    '/assets/img/Yams2.JPG',
+                    '/assets/img/Yams.JPG',
+                ]
+            ],
+            [
+                'logo' => 'reactTD',
+                'title' => 'VelMap',
+                'author' => 'Anthonydt16',
+                'technos' => ['html', 'sass', 'javascript','reactjs', 'router'],
+                'description' => 'un petit site en front-end avec ReactJS',
+                'description_long' => 'Le principe est simple a nous fournies une API avec des données sur les vélos et les stations, avec les contrats des villes partenaires. On devait par la suite les afficher sur une carte. ',
+                'price' => 'Gratuit',
+                'link' => 'https://anthonydt16.github.io/VelMap.github.io/',
+                'github' => 'https://github.com/Anthonydt16/VelMap',
+                'captures' => [
+                    "/assets/img/velMap.JPG",
+                    "/assets/img/velMap2.JPG",
+                    "/assets/img/velMap3.JPG",
+                    "/assets/img/velMap4.JPG",
+                ]
+            ],
+            [
+                'logo' => 'robot',
+                'title' => 'TradingBot',
+                'author' => 'Anthonydt16',
+                'technos' => ['python'],
+                'description' => 'Un bot de trading sur avec l API Bybit.',
+                'description_long' => "De la réflexion, à la réalisation, recherche sur la documentation sur l'API de Bybit, avec le Backtesting de la stratégie avec un Bot et ensuite de la mise en production et de la maintenance. J'ai tous fais seul mais le projet n'est encore qu'en face du test.",
+                'price' => 'Gratuit',
+                'link' => 'https://github.com/Anthonydt16/botCryptoBybit',
+                'github' => 'https://github.com/Anthonydt16/botCryptoBybit',
+                'captures' => [
+                ]
+            ],
+            [
+                'logo' => 'Hallowod',
+                'title' => 'Hallowod',
+                'author' => 'Anthonydt16',
+                'technos' => ['VueJS', 'NodeJS', 'MySQL', 'Docker', 'ExpressJS','PrismaJS'],
+                'description' => 'Une application fullstack avec une API REST et une interface web. Accès sur le sport pour prévoir ces séances',
+                'description_long' => "Hallowod est une application fullstack qui permet de prévoir ses séances de sport. Elle est composée d'une API REST et d'une interface web. L'API est développée en NodeJS avec ExpressJS et PrismaJS. L'interface web est développée en Vue js. L'application est déployée sur un serveur VPS avec Docker. L'atout de ce web application est le faite de pouvoir y upload c'est séance qui est déjà réalisée par un coach en format .txt l'app l'analyse au format JSON et l'ajoute dans la base de données. ",
+                'price' => 'Gratuit',
+                'link' => 'http://hallowod.fr/',
+                'github' => 'https://github.com/Anthonydt16/front_hallowod_vueJS',
+                'captures' => [
+                    '/assets/img/HallowodAccueil.jpg',
+                    '/assets/img/HallowodAjout.jpg',
+                    '/assets/img/HallowodMaquette.jpg',
+                ]
+            ],
+            [
+                'logo' => 'robot',
+                'title' => 'PenAI',
+                'author' => 'Anthonydt16',
+                'technos' => ['python'],
+                'description' => 'Un Micro-Framework pour entrainer ces model de Machine Learning.',
+                'description_long' => " Un micro-framework réalisait pour simplifier la standardisation des données fournies pour le modèle, la création du modèle, l'entrainement du modèle et la sauvegarde du modèle. Utiliser avec le framework Tensorflow",
+                'price' => 'Gratuit',
+                'link' => 'https://github.com/Anthonydt16/botCryptoBybit',
+                'github' => 'https://github.com/Anthonydt16/botCryptoBybit',
+                'captures' => [
+                ]
+            ],
+        ];
+
+        $this->view(
+            $projets[Router::params()['id']]
+        );
+
+    }
+
+}
+
 ?>
-
-
-
-<!-- 
-Vue du composant Lunch.
-Author: chris
-Version: 1.0
-Categorie: Component template
- -->
-<lunch>
-    <div class="cover">
-        <?=Builder::hidden($link, "link")?>
-        <div class="container_img_info">
-            <?= Image::svg($logo) ?>
-            <div class="info">
-                <h1><?=$title?></h1>
-                <span><?=$author?></span>
-                <div class="techno">
-                    <?php foreach ($technos as $techno):?>
-                        <?= Image::svg($techno) ?>
-                    <?php endforeach ?>
-                </div>
-                <div class="description">
-                    <p><?=$description?>Voici un site web qui présente TypeScript!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="button_click">
-            <h1 class="prix"><?=$price?></h1>
-            <button id="link_button">Accès</button>
-            <a href="<?=$github?>" class="lien_button"><?= Image::svg('github') ?></a>
-        </div>
-    </div>
-    <div class="container">
-        <div class="description-container">
-            <h2>Description</h2>
-            <p>
-                <?=$description_long?>
-            </p>
-        </div>
-
-        <div class="capture_ecran">
-            <h2>Captures d'écran :</h2>
-            <?php foreach ($captures as $capture):?>
-                <img src="<?=$capture?>" alt="">
-            <?php endforeach ?>
-        </div>
-    </div>
-</lunch>
