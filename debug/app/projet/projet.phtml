@@ -1,0 +1,70 @@
+<?php
+
+use Controller\Modal;
+use Controller\Projet\Presentation;
+use Kernel\Security\Vulnerability\Xss;
+use Kernel\Security\Vulnerability\Csrf;
+use Kernel\Html\Attribute;
+use Kernel\Html\Builder;
+use Kernel\Html\Output;
+use Kernel\Url\Location;
+?>
+<!-- 
+Vue du composant Projet.
+Author: chris
+Version: 1.0
+Categorie: Component template
+ -->
+<projet>
+    <h1 class="title_projet">~Liste des projets réalisée~</h1>
+    <h2 class="title_projet">~Web application~</h2>
+    <div class="container">
+        <?php new Presentation(
+            "0",
+            "icons8-typescript",
+            "Typescript",
+            "#007acc"
+        ) ?>
+        <?php new Presentation(
+                "1",
+            "Yams",
+            "Yams",
+            "#FA5252"
+        ) ?>
+       <?php //new Presentation(
+      //      "1",
+      //      "icons8-launchbox",
+      //      "Lanceur",
+      //      "#ff5722"
+      //  ) ?>
+
+        <?php new Presentation(
+            "2",
+            "reactTD",
+            "VelMap",
+            "#008037"
+        ) ?>
+        <?php new Presentation(
+            "3",
+            "robot",
+            "TradingBot",
+            "#C5B200"
+        ) ?>
+        <?php new Presentation(
+            "4",
+            "Hallowod",
+            "Hallowod",
+            "#6461fc"
+        ) ?>
+        <?php new Presentation(
+            "5",
+            "robot",
+            "PenAI",
+            "#ad719d"
+        ) ?>
+    </div>
+
+
+
+
+</projet>

@@ -1,0 +1,58 @@
+<?php
+use Kernel\Security\Vulnerability\Xss;
+use Kernel\Security\Vulnerability\Csrf;
+use Kernel\Html\Attribute;
+use Kernel\Html\Builder;
+use Kernel\Html\Output;
+use Kernel\Convert\Encoded;
+use Kernel\Convert\Number;
+use Kernel\Url\Location;
+?>
+
+
+
+<!-- 
+Vue du composant Ajouter.
+Author: chris
+Version: 1.0
+Categorie: Component template
+ -->
+<ajouter>
+	<form action="/ajouter" method="post">
+        <h1>Ajouter un projet
+        </h1>
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" class="form-control" placeholder="Nom" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea name="description" id="description" class="form-control" placeholder="Description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="lien">Lien</label>
+            <input type="text" name="lien" id="lien" class="form-control" placeholder="https://www.devotpi.fr/lorem" required>
+        </div>
+        <div class="form-group logo">
+            <label for="logo">Logo</label>
+            <input type="file" name="logo" id="logo" class="form-control" placeholder="logo" required>
+        </div>
+        <div class="form-group capture_ecran">
+            <label for="image">Capture d'écran</label>
+            <input type="file" name="image" id="image" class="form-control" placeholder="Capture d'écran" required>
+            <input type="file" name="image" id="image" class="form-control" placeholder="Capture d'écran" required>
+            <input type="file" name="image" id="image" class="form-control" placeholder="Capture d'écran" required>
+            <input type="file" name="image" id="image" class="form-control" placeholder="Capture d'écran" required>
+        </div>
+        <div class="form-group">
+            <label for="categorie">Catégorie</label>
+            <select name="categorie" id="categorie" class="form-control" required>
+                <option value="1"><?=\Kernel\Io\Convert\Image::svg("HTML")?></option>
+                <option value="2">Ipsum</option>
+                <option value="3">Dolor</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </div>
+</ajouter>

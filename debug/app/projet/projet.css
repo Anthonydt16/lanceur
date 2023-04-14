@@ -1,0 +1,24 @@
+projet {
+  min-height: 88vh;
+}
+projet .title_projet {
+  text-align: center;
+}
+projet h1.title_projet {
+  font-size: 54px;
+  font-weight: bold;
+  color: #0072c6;
+}
+projet h2.title_projet {
+  font-size: 48px;
+  color: #212121;
+}
+projet div.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+/*# sourceMappingURL=projet.css.map */

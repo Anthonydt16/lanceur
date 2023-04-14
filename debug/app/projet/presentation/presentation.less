@@ -1,0 +1,45 @@
+@import '../../../../.kernel/theme.less';
+
+
+
+// Style du composant Presentation.
+// Author: chris
+// Version: 1.0
+// Categorie: Component style
+projet-presentation {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	margin: 20px;
+	height: 156px;
+	width: 186px;
+	border: 1px solid @border-color;
+	border-radius: @border-radius;
+	&:hover {
+		filter: brightness(0.7);
+
+	}
+	&:active {
+		border : 8px solid @tertiary_color;
+	}
+	h2 {
+		color: @quaternary_color;
+	}
+	svg{
+		min-width: 100px;
+		min-height: 100px;
+		cursor: pointer;
+	}
+}
+
+
+
+// Style responsive du composant Presentation.
+@media all and (max-width: @responsive-max-width) {
+	projet-presentation {
+
+	}
+}

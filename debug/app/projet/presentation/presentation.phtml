@@ -1,0 +1,29 @@
+<?php
+
+use Kernel\Io\Convert\Image;
+use Kernel\Security\Vulnerability\Xss;
+use Kernel\Security\Vulnerability\Csrf;
+use Kernel\Html\Attribute;
+use Kernel\Html\Builder;
+use Kernel\Html\Output;
+use Kernel\Convert\Encoded;
+use Kernel\Convert\Number;
+use Kernel\Url\Location;
+?>
+
+
+
+<!-- 
+Vue du composant Presentation.
+Author: chris
+Version: 1.0
+Categorie: Component template
+ -->
+<projet-presentation     <?= Attribute::style([
+    "background-color" => $color
+]) ?>
+>
+    <?= Builder::hidden($id, 'id_project')?>
+    <?= Image::svg($svg) ?>
+    <h2><?= $title ?></h2>
+</projet-presentation>

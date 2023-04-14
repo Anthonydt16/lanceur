@@ -1,0 +1,186 @@
+@import '../../../.kernel/theme.less';
+
+
+
+// Style du composant Navbar.
+// Author: chris
+// Version: 1.0
+// Categorie: Component style
+navbar {
+	width: 100%;
+	div.computer{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		background-color: @secondary_color;
+		padding: 0 10px;
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+		div{
+			>.theme{
+				display:flex;
+				flex-direction: column;
+				align-items: center;
+				cursor: pointer;
+				&:hover{
+
+					>span{
+						color: @quaternary_color;
+					}
+
+					fill: @quaternary_color;
+				}
+				>svg{
+					width: 30px;
+					height: 30px;
+					margin: 0 10px;
+
+				}
+				>span{
+					font-weight: 700;
+					font-size: 20px;
+				}
+			}
+
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			h2{
+				margin: 0 20px 0 10px;
+			}
+			a{
+				display:flex;
+				flex-direction: column;
+				align-items: center;
+				fill: @font-color;
+				color: @font-color;
+				text-decoration: none;
+				margin: 0 10px;
+				>div{
+					font-weight: 700;
+					font-size: 20px;
+				}
+				&:hover{
+					>div{
+						color: @quaternary_color;
+					}
+					fill: @quaternary_color;
+				}
+				&:active{
+					>div{
+						color: @quaternary_color;
+					}
+					fill: @quaternary_color;
+				}
+				>svg{
+					width: 30px;
+					height: 30px;
+					margin: 0 10px;
+					cursor: pointer;
+				}
+
+			}
+		}
+	}
+	div.phone{
+		display: none;
+	}
+
+}
+
+
+
+// Style responsive du composant Navbar.
+@media all and (max-width: @responsive-max-width) {
+	navbar {
+		bottom: 0px;
+		div.phone {
+			width: 100vw;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			background-color: @secondary_color;
+			padding: 0 10px;
+			box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+			div {
+				> .theme {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					cursor: pointer;
+
+					&:hover {
+
+						> span {
+							color: @quaternary_color;
+						}
+
+						fill: @quaternary_color;
+					}
+
+					> svg {
+						width: 30px;
+						height: 30px;
+						margin: 0 10px;
+
+					}
+
+					> span {
+						font-weight: 700;
+						font-size: 20px;
+					}
+				}
+
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				h2 {
+					margin: 0 20px 0 10px;
+				}
+
+				a {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					fill: @font-color;
+					color: @font-color;
+					text-decoration: none;
+					margin: 0 10px;
+
+					> div {
+						font-weight: 700;
+						font-size: 20px;
+					}
+
+					&:hover {
+						> div {
+							color: @quaternary_color;
+						}
+
+						fill: @quaternary_color;
+					}
+
+					&:active {
+						> div {
+							color: @quaternary_color;
+						}
+
+						fill: @quaternary_color;
+					}
+
+					> svg {
+						width: 30px;
+						height: 30px;
+						margin: 0 10px;
+						cursor: pointer;
+					}
+
+				}
+			}
+		}
+		div.computer{
+			display: none;
+		}
+	}
+}

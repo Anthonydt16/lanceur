@@ -1,0 +1,52 @@
+@import '../../../.kernel/theme.less';
+
+
+
+// Style du composant Modal.
+// Author: chris
+// Version: 1.0
+// Categorie: Component style
+modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	.content{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: nowrap;
+		background-color: @tertiary_color;
+		position: relative;
+		margin: 20px;
+		padding: 20px;
+		span.close{
+			position: absolute;
+			top: 0;
+			right: 20px;
+			color: red;
+			font-size: 40px;
+			font-weight: bold;
+			cursor: pointer;
+
+		}
+
+
+
+
+	}
+
+}
+
+
+
+// Style responsive du composant Modal.
+@media all and (max-width: @responsive-max-width) {
+	modal {
+
+	}
+}

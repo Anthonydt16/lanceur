@@ -1,0 +1,28 @@
+projet-presentation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  height: 156px;
+  width: 186px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+projet-presentation:hover {
+  filter: brightness(0.7);
+}
+projet-presentation:active {
+  border: 8px solid #212121;
+}
+projet-presentation h2 {
+  color: #e6e6e6;
+}
+projet-presentation svg {
+  min-width: 100px;
+  min-height: 100px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=presentation.css.map */

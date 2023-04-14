@@ -1,0 +1,59 @@
+@import '../../../.kernel/theme.less';
+
+
+
+// Style du composant Login.
+// Author: chris
+// Version: 1.0
+// Categorie: Component style
+login {
+	background-color: @primary_color;
+	width: 100vw;
+	height: 93vh;
+	form{
+		h1{
+			color: @font-color;
+			font-size: 2em;
+			margin: 10px;
+		}
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		div.form-group {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			> input {
+				margin: 10px;
+				border-radius: 5px;
+				border: 1px solid @border-color;
+				padding: 10px;
+				width: 300px;
+			}
+
+			> button {
+				margin: 10px;
+				border-radius: 5px;
+				border: 1px solid @border-color;
+				padding: 10px;
+				width: 300px;
+				background-color: @secondary_color;
+				color: @font-color;
+			}
+		}
+
+	}
+}
+
+
+
+// Style responsive du composant Login.
+@media all and (max-width: @responsive-max-width) {
+	login {
+
+	}
+}

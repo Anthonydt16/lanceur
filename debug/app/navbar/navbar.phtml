@@ -1,0 +1,41 @@
+<?php
+use Kernel\Security\Vulnerability\Xss;
+use Kernel\Security\Vulnerability\Csrf;
+use Kernel\Html\Attribute;
+use Kernel\Html\Builder;
+use Kernel\Html\Output;
+use Kernel\Url\Location;
+?>
+
+
+
+<!-- 
+Vue du composant Navbar.
+Author: chris
+Version: 1.0
+Categorie: Component template
+<a <?= Attribute::href('/accueil') ?>>Accueil</a>
+ -->
+<navbar>
+    <div class="computer">
+        <div>
+            <a class="navBar" <?= Attribute::href('/accueil') ?>><?= \Kernel\Io\Convert\Image::svg("home") ?><div>Accueil</div></a>
+            <a class="navBar" <?= Attribute::href('/projet') ?>><?= \Kernel\Io\Convert\Image::svg("projectIcon") ?><div>Projets</div></a>
+            <a class="navBar" <?= Attribute::href('/projet') ?>><?= \Kernel\Io\Convert\Image::svg("info") ?><div>Qui suis-je?</div></a>
+        </div>
+        <div>
+            <div class="theme"><?= \Kernel\Io\Convert\Image::svg("sun") ?><span>Clair</span></div>
+        </div>
+    </div>
+    <div class="phone">
+        <div>
+            <a class="navBar" <?= Attribute::href('/accueil') ?>><?= \Kernel\Io\Convert\Image::svg("home") ?><div>Accueil</div></a>
+            <a class="navBar" <?= Attribute::href('/projet') ?>><?= \Kernel\Io\Convert\Image::svg("projectIcon") ?><div>Projets</div></a>
+            <a class="navBar" <?= Attribute::href('/projet') ?>><?= \Kernel\Io\Convert\Image::svg("info") ?><div>Qui suis-je?</div></a>
+        </div>
+        <div>
+            <div class="theme"><?= \Kernel\Io\Convert\Image::svg("sun") ?><span>Clair</span></div>
+        </div>
+    </div>
+
+</navbar>

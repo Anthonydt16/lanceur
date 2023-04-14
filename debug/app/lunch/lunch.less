@@ -1,0 +1,142 @@
+@import '../../../.kernel/theme.less';
+@import '../../../.kernel/less/button.less';
+
+
+// Style du composant Lunch.
+// Author: chris
+// Version: 1.0
+// Categorie: Component style
+lunch {
+	width: 100vw;
+	height: 89vh;
+
+	margin: 42px;
+
+	.cover {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		width: 81vw;
+		justify-content: space-around;
+		background-color:@quaternary_color;
+		padding: 20px;
+		border-radius: 20px;
+		.container_img_info{
+			display: flex;
+			width: 100%;
+			>svg{
+				max-width: 200px;
+				max-height: 200px;
+			}
+			.info {
+				display: flex;
+				padding-top: 20px;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: stretch;
+				h1{
+					margin: 10px;
+				}
+				>span{
+					margin-bottom: 5px;
+					margin-left:10px;
+				}
+				.techno {
+
+					>svg{
+						max-width: 48px;
+						cursor: pointer;
+						max-height: 48px;
+					}
+				}
+
+				.description{
+
+				}
+			}
+		}
+
+		.button_click{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding-top: 20px;
+			.prix{
+				margin: 5px 0px;
+			}
+			.lien_button{
+				margin: 5px 0px;
+				svg{
+					max-width: 48px;
+					max-height: 48px;
+				}
+			}
+			>button{
+				margin: 5px 0px;
+				background-color: @secondary_color;
+				color: @primary_color;
+				border-radius: 10px;
+				font-size: 1.5em;
+				font-weight: bold;
+				border: none;
+				padding: 10px;
+				transition: all 0.1s ease-in-out;
+				cursor: pointer;
+				&:hover{
+					background-color: @primary_color;
+					color: @secondary_color;
+				}
+			}
+		}
+	}
+
+	.container{
+		margin-top: 20px;
+		.description-container{
+			margin-bottom: 20px;
+		}
+		.capture_ecran{
+			img{
+				cursor: pointer;
+				max-width: 307px !important;
+				max-height: 228px;
+
+				border-radius: 10px;
+				&:hover{
+					border: 1px solid @secondary_color;
+					transform: scale(1.9);
+				}
+			}
+		}
+	}
+}// Style responsive du composant Lunch.
+@media all and (max-width: @responsive-max-width) {
+	lunch {
+		.cover {
+			flex-direction: column;
+			.container_img_info{
+				display: block;
+				>svg{
+				}
+			}
+			.button_click{
+				justify-content: flex-end;
+			}
+		}
+		.container{
+			width: 86%;
+			.description-container{
+
+			}
+			.capture_ecran{
+				img{
+					max-width: 307px;
+					&:hover{
+						border: 1px solid @secondary_color;
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+	}
+}

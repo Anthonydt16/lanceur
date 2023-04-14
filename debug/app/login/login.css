@@ -1,0 +1,40 @@
+login {
+  background-color: #d0d0d0;
+  width: 100vw;
+  height: 93vh;
+}
+login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+login form h1 {
+  color: #212121;
+  font-size: 2em;
+  margin: 10px;
+}
+login form div.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+login form div.form-group > input {
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px;
+}
+login form div.form-group > button {
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px;
+  background-color: #0072c6;
+  color: #212121;
+}
+/*# sourceMappingURL=login.css.map */

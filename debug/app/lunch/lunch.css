@@ -1,0 +1,227 @@
+.button {
+  color: white;
+  background-color: #3c7cfc;
+  width: fit-content;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
+  font-size: 14px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.button:hover {
+  filter: brightness(110%);
+}
+.button:active {
+  filter: brightness(120%);
+}
+.button:disabled {
+  background-color: #cccccc;
+  color: #1a1a1a;
+  cursor: not-allowed;
+}
+.button:disabled:hover {
+  filter: brightness(90%);
+}
+.button-bad {
+  color: white;
+  background-color: #3c7cfc;
+  width: fit-content;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
+  font-size: 14px;
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: #cc4f4a;
+}
+.button-bad:hover {
+  filter: brightness(110%);
+}
+.button-bad:active {
+  filter: brightness(120%);
+}
+.button-bad:disabled {
+  background-color: #cccccc;
+  color: #1a1a1a;
+  cursor: not-allowed;
+}
+.button-bad:disabled:hover {
+  filter: brightness(90%);
+}
+.button-good {
+  color: white;
+  background-color: #3c7cfc;
+  width: fit-content;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
+  font-size: 14px;
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: #65a577;
+}
+.button-good:hover {
+  filter: brightness(110%);
+}
+.button-good:active {
+  filter: brightness(120%);
+}
+.button-good:disabled {
+  background-color: #cccccc;
+  color: #1a1a1a;
+  cursor: not-allowed;
+}
+.button-good:disabled:hover {
+  filter: brightness(90%);
+}
+.button-warn {
+  color: white;
+  background-color: #3c7cfc;
+  width: fit-content;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
+  font-size: 14px;
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: #d18726;
+}
+.button-warn:hover {
+  filter: brightness(110%);
+}
+.button-warn:active {
+  filter: brightness(120%);
+}
+.button-warn:disabled {
+  background-color: #cccccc;
+  color: #1a1a1a;
+  cursor: not-allowed;
+}
+.button-warn:disabled:hover {
+  filter: brightness(90%);
+}
+lunch {
+  width: 100vw;
+  height: 89vh;
+  margin: 42px;
+}
+lunch .cover {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 81vw;
+  justify-content: space-around;
+  background-color: #e6e6e6;
+  padding: 20px;
+  border-radius: 20px;
+}
+lunch .cover .container_img_info {
+  display: flex;
+  width: 100%;
+}
+lunch .cover .container_img_info > svg {
+  max-width: 200px;
+  max-height: 200px;
+}
+lunch .cover .container_img_info .info {
+  display: flex;
+  padding-top: 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+lunch .cover .container_img_info .info h1 {
+  margin: 10px;
+}
+lunch .cover .container_img_info .info > span {
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+lunch .cover .container_img_info .info .techno > svg {
+  max-width: 48px;
+  cursor: pointer;
+  max-height: 48px;
+}
+lunch .cover .button_click {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+lunch .cover .button_click .prix {
+  margin: 5px 0px;
+}
+lunch .cover .button_click .lien_button {
+  margin: 5px 0px;
+}
+lunch .cover .button_click .lien_button svg {
+  max-width: 48px;
+  max-height: 48px;
+}
+lunch .cover .button_click > button {
+  margin: 5px 0px;
+  background-color: #0072c6;
+  color: #d0d0d0;
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+lunch .cover .button_click > button:hover {
+  background-color: #d0d0d0;
+  color: #0072c6;
+}
+lunch .container {
+  margin-top: 20px;
+}
+lunch .container .description-container {
+  margin-bottom: 20px;
+}
+lunch .container .capture_ecran img {
+  cursor: pointer;
+  max-width: 307px !important;
+  max-height: 228px;
+  border-radius: 10px;
+}
+lunch .container .capture_ecran img:hover {
+  border: 1px solid #0072c6;
+  transform: scale(1.9);
+}
+@media all and (max-width: 768px) {
+  lunch .cover {
+    flex-direction: column;
+  }
+  lunch .cover .container_img_info {
+    display: block;
+  }
+  lunch .cover .button_click {
+    justify-content: flex-end;
+  }
+  lunch .container {
+    width: 86%;
+  }
+  lunch .container .capture_ecran img {
+    max-width: 307px;
+  }
+  lunch .container .capture_ecran img:hover {
+    border: 1px solid #0072c6;
+    transform: scale(1.1);
+  }
+}
+/*# sourceMappingURL=lunch.css.map */

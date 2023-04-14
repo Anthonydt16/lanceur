@@ -1,0 +1,152 @@
+navbar {
+  width: 100%;
+}
+navbar div.computer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #0072c6;
+  padding: 0 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+navbar div.computer div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+navbar div.computer div > .theme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+navbar div.computer div > .theme:hover {
+  fill: #e6e6e6;
+}
+navbar div.computer div > .theme:hover > span {
+  color: #e6e6e6;
+}
+navbar div.computer div > .theme > svg {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+navbar div.computer div > .theme > span {
+  font-weight: 700;
+  font-size: 20px;
+}
+navbar div.computer div h2 {
+  margin: 0 20px 0 10px;
+}
+navbar div.computer div a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  fill: #212121;
+  color: #212121;
+  text-decoration: none;
+  margin: 0 10px;
+}
+navbar div.computer div a > div {
+  font-weight: 700;
+  font-size: 20px;
+}
+navbar div.computer div a:hover {
+  fill: #e6e6e6;
+}
+navbar div.computer div a:hover > div {
+  color: #e6e6e6;
+}
+navbar div.computer div a:active {
+  fill: #e6e6e6;
+}
+navbar div.computer div a:active > div {
+  color: #e6e6e6;
+}
+navbar div.computer div a > svg {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+navbar div.phone {
+  display: none;
+}
+@media all and (max-width: 768px) {
+  navbar {
+    bottom: 0px;
+  }
+  navbar div.phone {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #0072c6;
+    padding: 0 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  navbar div.phone div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  navbar div.phone div > .theme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  navbar div.phone div > .theme:hover {
+    fill: #e6e6e6;
+  }
+  navbar div.phone div > .theme:hover > span {
+    color: #e6e6e6;
+  }
+  navbar div.phone div > .theme > svg {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+  }
+  navbar div.phone div > .theme > span {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  navbar div.phone div h2 {
+    margin: 0 20px 0 10px;
+  }
+  navbar div.phone div a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    fill: #212121;
+    color: #212121;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  navbar div.phone div a > div {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  navbar div.phone div a:hover {
+    fill: #e6e6e6;
+  }
+  navbar div.phone div a:hover > div {
+    color: #e6e6e6;
+  }
+  navbar div.phone div a:active {
+    fill: #e6e6e6;
+  }
+  navbar div.phone div a:active > div {
+    color: #e6e6e6;
+  }
+  navbar div.phone div a > svg {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  navbar div.computer {
+    display: none;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

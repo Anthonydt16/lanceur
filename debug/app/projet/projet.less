@@ -1,0 +1,41 @@
+@import '../../../.kernel/theme.less';
+
+
+
+// Style du composant Projet.
+// Author: chris
+// Version: 1.0
+// Categorie: Component style
+projet {
+	min-height: 88vh;
+	.title_projet{
+		text-align: center;
+	}
+	h1.title_projet{
+		font-size: @font-size-title;
+		font-weight: bold;
+		color: @secondary_color;
+	}
+	h2.title_projet{
+		font-size:@font-size-second-title;
+		color: @tertiary_color;
+	}
+	div.container{
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-content: flex-start;
+		align-items: flex-start;
+	}
+}
+
+
+
+// Style responsive du composant Projet.
+@media all and (max-width: @responsive-max-width) {
+	projet {
+
+	}
+}

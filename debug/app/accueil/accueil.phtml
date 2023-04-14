@@ -1,0 +1,30 @@
+<?php
+use Kernel\Security\Vulnerability\Xss;
+use Kernel\Security\Vulnerability\Csrf;
+use Kernel\Html\Attribute;
+use Kernel\Html\Builder;
+use Kernel\Html\Output;
+use Kernel\Convert\Encoded;
+use Kernel\Convert\Number;
+use Kernel\Url\Location;
+?>
+
+
+
+<!-- 
+Vue du composant Accueil.
+Author: chris
+Version: 1.0
+Categorie: Component template
+ -->
+<accueil>
+
+	<div id="loading">
+        <?=\Kernel\Io\Convert\Image::svg("loading")?>
+        <span class="title">Chargement en cours ...</span>
+    </div>
+
+    <h1>Bienvenue sur mon <span>lanceur</span> de projet!</h1>
+    <h2>Mes projets les plus abouties ou accessibles sont répertorié ici ;)</h2>
+    <h3>Regarde et amuse toi :)</h3>
+</accueil>

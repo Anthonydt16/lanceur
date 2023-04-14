@@ -1,0 +1,36 @@
+<?php
+use Kernel\Security\Vulnerability\Xss;
+use Kernel\Security\Vulnerability\Csrf;
+use Kernel\Html\Attribute;
+use Kernel\Html\Builder;
+use Kernel\Html\Output;
+use Kernel\Convert\Encoded;
+use Kernel\Convert\Number;
+use Kernel\Url\Location;
+?>
+
+
+
+<!-- 
+Vue du composant Login.
+Author: chris
+Version: 1.0
+Categorie: Component template
+ -->
+<login>
+
+    <form action="/login" method="post">
+        <h1>Se connecté !
+        </h1>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+        </div>
+</login>

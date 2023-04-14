@@ -1,0 +1,62 @@
+<?php
+
+use Kernel\Io\Convert\Image;
+use Kernel\Security\Vulnerability\Xss;
+use Kernel\Security\Vulnerability\Csrf;
+use Kernel\Html\Attribute;
+use Kernel\Html\Builder;
+use Kernel\Html\Output;
+use Kernel\Convert\Encoded;
+use Kernel\Convert\Number;
+use Kernel\Url\Location;
+?>
+
+
+
+<!-- 
+Vue du composant Lunch.
+Author: chris
+Version: 1.0
+Categorie: Component template
+ -->
+<lunch>
+    <div class="cover">
+        <?=Builder::hidden($link, "link")?>
+        <div class="container_img_info">
+            <?= Image::svg($logo) ?>
+            <div class="info">
+                <h1><?=$title?></h1>
+                <span><?=$author?></span>
+                <div class="techno">
+                    <?php foreach ($technos as $techno):?>
+                        <?= Image::svg($techno) ?>
+                    <?php endforeach ?>
+                </div>
+                <div class="description">
+                    <p><?=$description?>Voici un site web qui présente TypeScript!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="button_click">
+            <h1 class="prix"><?=$price?></h1>
+            <button id="link_button">Accès</button>
+            <a href="<?=$github?>" class="lien_button"><?= Image::svg('github') ?></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="description-container">
+            <h2>Description</h2>
+            <p>
+                <?=$description_long?>
+            </p>
+        </div>
+
+        <div class="capture_ecran">
+            <h2>Captures d'écran :</h2>
+            <?php foreach ($captures as $capture):?>
+                <img src="<?=$capture?>" alt="">
+            <?php endforeach ?>
+        </div>
+    </div>
+</lunch>
