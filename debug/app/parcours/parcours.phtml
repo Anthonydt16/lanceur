@@ -1,0 +1,61 @@
+<?php
+use Kernel\Security\Vulnerability\Xss;
+use Kernel\Security\Vulnerability\Csrf;
+use Kernel\Html\Attribute;
+use Kernel\Html\Builder;
+use Kernel\Html\Output;
+use Kernel\Convert\Encoded;
+use Kernel\Convert\Number;
+use Kernel\Url\Location;
+?>
+
+
+
+<!-- 
+Vue du composant Parcours.
+Author: chris
+Version: 1.0
+Categorie: Component template
+ -->
+<parcours>
+    <h1>Mon Parcours</h1>
+    <div class="container_parcours">
+        <li>
+            <span>Ecole</span>
+            BAC PRO SN option Réseaux à Charle Augustin Coulomb à Angoulême 16000
+        </li>
+        <li>
+            <span>Stage</span>
+            4 semaines en tant que développeur web FullStack chez <a href="https://www.hexasolutions3d.fr/">HexaSolution3D</a> à Jarnac 16400.<br>
+            Angular, JavaScript, CSS, HTML et PHP. L'objectif était le début de la création de leurs BackOffice.
+        </li>
+        <li>
+            <span>Stage</span>
+            8 semaines en tant que développeur web FullStack chez <a href="https://www.hexasolutions3d.fr/">HexaSolution3D</a> à Jarnac 16400.<br>
+            Angular, JavaScript, CSS, HTML et PHP. L'objectif était implementation d'une maquette angular pour leurs BackOffice.
+        </li>
+        <li>
+            <span>Ecole</span>
+            BTS SIO option SLAM à Gustave Eiffel à Bordeaux 33000
+        </li>
+        <li>
+            <span>Stage</span>
+            4 semaines en tant que développeur web FullStack chez KaliWeb à Bordeaux 33000.<br>
+            Bootstrap, JavaScript, CSS, HTML et PHP. L'objectif était la création d'une web application marketing, pour convertir un client freemium en client payant avec des sms .
+        </li>
+        <li>
+            <span>Stage</span>
+            8 semaines en tant que développeur web FullStack chez MyKlinica à Bordeaux 33000.<br>
+            Wordpress, JavaScript, CSS, HTML, PHP et Python. L'objectif était de maintenir et améliorer le site web de <a href="https://myklinica.com/">MyKlinica</a>. La création d'un bot de scrapping à aussi était pour un site de prise de rendez-vous médical ;).
+        </li>
+        <li>
+            <span>Ecole</span>
+            Licence Pro DAWIN IUT de Gradignan à Bordeaux 33000
+        </li>
+        <li>
+            <span>Alternance</span>
+            1 an en tant que développeur web FullStack chez <a href="https://www.probtp.com/">Probtp</a> à Floirac 33.<br>
+            PHP, JavaScript, ES6, LESS, Python, HTML, SQL, Postgresql. L'objectif était de crée des web application métier pour améliorer la productivité des commerciaux et des collaborateurs. J'ai aussi était amené à créer des outils de gestion interne. J'ai aussi était amené à créer des IA a l'aide du framework Tensorflow pour des model de machine learning, OCR manuscrit et de document. j'ai donc réqlisé un micro-framework PENIA pour m'aider au formatage des données pour le model. J'ai eu des rôles de support, chefs de projets.
+        </li>
+    </div>
+</parcours>
